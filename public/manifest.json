@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "NSW GTP React Table",
+  "name": "An extended table to the integration with the NSW Design System CSS frameworks.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "PRIMARY-nsw-government-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "PRIMARY-nsw-government-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

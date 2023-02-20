@@ -1,15 +1,14 @@
 
+import Layout from 'Layout';
 import './App.scss';
+import FlatTable from 'scenes/FlatTable';
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>React Bootstrap Table</h1>
-      <table>
-        
-      </table>
-    </div>  
+    <Layout>
+      <FlatTable></FlatTable>
+    </Layout>
   );
 }
 
