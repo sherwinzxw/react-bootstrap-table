@@ -34,5 +34,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-table": "^7.7.2",
+    "bootstrap": "^5.2.3",
+    "classnames": "^2.3.2",
+    "query-string": "^8.1.0",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.5"
+  },
+  "description": "This is the boostrap-enabled react table helper that can help build a feature-abundant table with ease",
+  "main": "index.js",
+  "author": "Sherwin Zhao <sherwinzxw1990@gmail.com>",
+  "license": "MIT"
 }
