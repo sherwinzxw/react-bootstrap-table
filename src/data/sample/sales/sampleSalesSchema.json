@@ -1,0 +1,93 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "OrderDate": {
+          "type": "string"
+        },
+        "Category": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string"
+        },
+        "CustomerName": {
+          "type": "string"
+        },
+        "Discount": {
+          "type": "number"
+        },
+        "OrderID": {
+          "type": "string"
+        },
+        "PostalCode": {
+          "type": "number"
+        },
+        "ProductName": {
+          "type": "string"
+        },
+        "Profit": {
+          "type": "number"
+        },
+        "Quantity": {
+          "type": "number"
+        },
+        "Region": {
+          "type": "string"
+        },
+        "Sales": {
+          "type": "number"
+        },
+        "Segment": {
+          "type": "string"
+        },
+        "ShipDate": {
+          "type": "string"
+        },
+        "ShipMode": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "Sub_Category": {
+          "type": "string"
+        },
+        "DaystoShipActual": {
+          "type": "number"
+        },
+        "SalesForecast": {
+          "type": "number"
+        },
+        "ShipStatus": {
+          "type": "string"
+        },
+        "DaystoShipScheduled": {
+          "type": "number"
+        },
+        "OrderProfitable": {
+          "type": "string"
+        },
+        "SalesperCustomer": {
+          "type": "number"
+        },
+        "ProfitRatio": {
+          "type": "number"
+        },
+        "SalesaboveTarget": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        }
+      }
+    }
+  }

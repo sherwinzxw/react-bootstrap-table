@@ -1,0 +1,135 @@
+{
+  "name": "Employee Details",
+  "pagination": true,
+  "pageSize": 10,
+  "search": true,
+  "sortable": true,
+  "classes": "react-bootstrap-table table",
+  "clickToSelect": false,
+  "togglePageSize": true,
+  "height": null,
+  "toolbar": ["export", "refresh", "columns"],
+  "columns": {
+    "EMPLOYEE_ID": {
+      "type": "string",
+      "name": "Employee ID",
+      "sort": true,
+      "search": true,
+      "hide": false,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 1      
+    },
+    "FIRST_NAME": {
+      "type": "string",
+      "name": "First Name",
+      "sort": true,
+      "search": true,
+      "hide": false,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 2      
+    },
+    "LAST_NAME": {
+      "type": "string",
+      "name": "Last Name",
+      "sort": true,
+      "search": true,
+      "hide": false,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 3
+    },
+    "EMAIL": {
+      "type": "string",
+      "name": "Email",
+      "sort": true,
+      "search": true,
+      "hide": false,
+      "formatters": ["email"],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 4
+    },
+    "PHONE_NUMBER": {
+      "type": "string",
+      "name": "Phone",
+      "sort": true,
+      "search": true,
+      "hide": false,
+      "formatters": ["phone_au"],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 5
+    },
+    "HIRE_DATE": {
+      "type": "string",
+      "name": "Hire Date",
+      "sort": true,
+      "search": false,
+      "hide": false,
+      "formatters": ["date_short_au"],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 6
+    },
+    "JOB_ID": {
+      "type": "string",
+      "name": "Job ID",
+      "sort": true,
+      "search": false,
+      "hide": false,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 7
+    },
+    "SALARY": {
+      "type": "number",
+      "name": "Salary",
+      "sort": true,
+      "search": false,
+      "hide": false,
+      "formatters": ["currency_au"],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 8
+    },
+    "COMMISSION_PCT": {
+      "type": "string",
+      "name": "Commision (%)",
+      "sort": true,
+      "search": false,
+      "hide": false,
+      "formatters": ["percentage"],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 9
+    },
+    "MANAGER_ID": {
+      "type": "string",
+      "name": "Manager ID",
+      "sort": true,
+      "search": false,
+      "hide": true,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 10
+    },
+    "DEPARTMENT_ID": {
+      "type": "number",
+      "name": "Department ID",
+      "sort": true,
+      "search": false,
+      "hide": true,
+      "formatters": [],
+      "classnameRenderers": ["nowrap"],
+      "innerHtmlRenderers": [],
+      "sequence": 11
+    }
+  }
+}

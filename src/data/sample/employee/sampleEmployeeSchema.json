@@ -1,0 +1,42 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "EMPLOYEE_ID": {
+          "type": "number"
+        },
+        "FIRST_NAME": {
+          "type": "string"
+        },
+        "LAST_NAME": {
+          "type": "string"
+        },
+        "EMAIL": {
+          "type": "string"
+        },
+        "PHONE_NUMBER": {
+          "type": "string"
+        },
+        "HIRE_DATE": {
+          "type": "string"
+        },
+        "JOB_ID": {
+          "type": "string"
+        },
+        "SALARY": {
+          "type": "number"
+        },
+        "COMMISSION_PCT": {
+          "type": "string"
+        },
+        "MANAGER_ID": {
+          "type": "string"
+        },
+        "DEPARTMENT_ID": {
+          "type": "number"
+        }
+      }
+    }
+  }
