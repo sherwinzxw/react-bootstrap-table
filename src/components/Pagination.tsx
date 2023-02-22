@@ -67,17 +67,11 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
     }
   }
 
-  // const onPageNumberKeyDown = (value:string) => {
-  //   if(value > pageCount){
-  //     return pageCount
-  //   }
-  // }
-
   if (pageCount <= 1) {
     return null;
   }
   return (
-    <div className="nsw-pagination-custom-container">
+    <div className="react-table-pagination-container">
       <div>
         <nav aria-label="Pagination" className="nsw-pagination">
           <ul>
@@ -116,7 +110,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
               if (item === "...") {
                 return (
                   <li key={`page-${item}-${index}`}>
-                    <span className="nsw-pagination-custom__spreader">…</span>
+                    <span className="custom__spreader">…</span>
                   </li>
                 );
               } else {
@@ -183,7 +177,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
         </nav>
       </div>
       {pageCount > 10 ? (
-        <div className="nsw-pagination-custom-go2page-container">
+        <div className="custom-go2page-container">
           <input
             className="nsw-form__input"
             type="number"

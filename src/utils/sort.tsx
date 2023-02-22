@@ -1,8 +1,4 @@
-export const SortTable = (
-  tableId: any,
-  n: any,
-  isReverseSortOrder: Boolean
-) => {
+export function SortTable(tableId: any, n: any, isReverseSortOrder: Boolean) {
   var table,
     rows,
     switching,
@@ -67,4 +63,20 @@ export const SortTable = (
       }
     }
   }
-};
+}
+
+export function SortObjects(objectArray: any, sortPropertyKey: string, isReverseSortOrder : boolean) {
+  
+  let result = [];
+  
+  if(Array.isArray(objectArray)){
+    if(!isReverseSortOrder){
+      result = objectArray.sort((a : any, b : any) => (a[sortPropertyKey] > b[sortPropertyKey]) ? 1 : -1)
+    }else{
+      result = objectArray.sort((a : any, b : any) => (a[sortPropertyKey] <= b[sortPropertyKey]) ? 1 : -1)
+    }
+  }else{
+    throw new Error('Invalid input. Not an array!');
+  }
+  return objectArray;
+}

@@ -1,0 +1,47 @@
+.react-table-pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    margin:1rem 0;
+    float:right;
+    .nsw-pagination {
+      height: 100%;
+  
+      ul {
+        height: 100%;
+        vertical-align: middle;
+        li {
+          cursor: pointer;
+          span.custom__spreader {
+            cursor: no-drop;
+          }
+        }
+        .nsw-direction-link,
+        .nsw-pagination__link {
+          cursor: pointer;
+  
+          .nsw-direction-link__text {
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  
+    .custom-go2page-container {
+      margin-left: 2rem;
+  
+      input {
+        width: 5em;
+        padding-left:0;
+        padding-right:0;
+        text-align: center;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  

@@ -7,6 +7,7 @@
   "classes": "react-bootstrap-table table",
   "clickToSelect": false,
   "togglePageSize": true,
+  "togglePagination": true,
   "height": null,
   "toolbar": ["export", "refresh", "columns"],
   "columns": {

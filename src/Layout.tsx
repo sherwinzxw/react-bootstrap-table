@@ -21,7 +21,7 @@ const Layout = (props: any) => {
           <SideNav></SideNav>
         </div>
         <div className="nsw-docs__main">
-          <Introduction></Introduction>
+          <Introduction title={`Paginated Table`} intro={`This is the paginated table`}></Introduction>
           <div className="nsw-docs__content">
             <div className="nsw-docs__container">{children}</div>
           </div>

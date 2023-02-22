@@ -18,7 +18,7 @@ const Header = () => {
                 </a>
               </div>
               <div className="nsw-header__name">
-                <div className="nsw-header__title">Design System <span className="nsw-docs__version">v3.2.4</span></div>
+                <div className="nsw-header__title">React Bootstrap Table <span className="nsw-docs__version">v1.0.1</span></div>
               </div>
               <div className="nsw-header__menu">
                 <button type="button" className="js-open-nav" aria-expanded="false" aria-controls="main-nav">
