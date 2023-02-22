@@ -27,13 +27,8 @@ export function sliceObjectArrayByPageNumber(
   pageNumber: number,
   pageSize: number
 ) {
-  
-  return objectArray.slice(
-    (pageNumber - 1) * pageSize,
-    pageNumber * pageSize
-  );
+  return objectArray.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
 }
-
 
 export function sliceObjectArrayToPages(
   objectArray: Array<object>,
@@ -41,12 +36,9 @@ export function sliceObjectArrayToPages(
   pageSize: number
 ) {
   let newObjectArray = [];
-  for(var i = 1; i <= pageNumberTotal; i++){
-    let pageData = objectArray.slice(
-      (i - 1) * pageSize,
-      i * pageSize
-    );
-    newObjectArray.push(pageData)
+  for (var i = 1; i <= pageNumberTotal; i++) {
+    let pageData = objectArray.slice((i - 1) * pageSize, i * pageSize);
+    newObjectArray.push(pageData);
   }
-  return newObjectArray
+  return newObjectArray;
 }

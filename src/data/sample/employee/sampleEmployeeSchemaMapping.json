@@ -1,13 +1,13 @@
 {
-  "name": "Employee Details",
+  "name": "Employee Details",  
   "pagination": true,
   "pageSize": 10,
   "search": true,
   "sortable": true,
   "classes": "react-bootstrap-table table",
   "clickToSelect": false,
-  "togglePageSize": true,
   "togglePagination": true,
+  "togglePageSize": true,
   "height": null,
   "toolbar": ["export", "refresh", "columns"],
   "columns": {

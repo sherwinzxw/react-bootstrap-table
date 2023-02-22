@@ -20,7 +20,6 @@ type TableProps = {
   tableHeight?: number;
   sortable?: boolean;
   hasHeader?: boolean;
-  togglePageSize?: number;
   toggleColumns?: boolean;
   toggleSearch?: boolean;
   toggleExport?: boolean;
@@ -48,7 +47,6 @@ const ReactTable = (props: TableProps) => {
     tableHeight = (null || undefined) ?? null,
     sortable = (null || undefined) ?? false,
     hasHeader = (null || undefined) ?? false,
-    togglePageSize = (null || undefined) ?? false,
     toggleColumns = (null || undefined) ?? false,
     toggleSearch = (null || undefined) ?? false,
     toggleExport = (null || undefined) ?? false,
@@ -65,6 +63,9 @@ const ReactTable = (props: TableProps) => {
   const [currentPageNumber, setCurrentPageNumber] = useState<number>(1);
   const [togglePagination, setTogglePagination] = useState<boolean>(
     tableSchema.togglePagination
+  );
+  const [togglePageSize, setTogglePageSize] = useState<boolean>(
+    tableSchema.togglePageSize
   );
   const [loading, setLoading] = useState<boolean>(true);
   const [schema, setSchema] = useState<any>(tableSchema);
@@ -156,7 +157,7 @@ const ReactTable = (props: TableProps) => {
     setData(setTableData(tableData, tableSchema, pageSize));
   }, []);
   const handleOnPageSizeSelectorChange = React.useCallback((event: any) => {
-    console.log(event)
+    console.log(event);
     setPageSize(event);
     setData(setTableData(tableData, tableSchema, event));
   }, []);
@@ -197,7 +198,7 @@ const ReactTable = (props: TableProps) => {
             pageNumber: currentPageNumber,
             pageSize: pageSize,
             rowTotal: tableData.length,
-            onPageSizeChange: handleOnPageSizeSelectorChange 
+            onPageSizeChange: handleOnPageSizeSelectorChange,
           })}
           {PageSelector(
             _totalPageNumber,
