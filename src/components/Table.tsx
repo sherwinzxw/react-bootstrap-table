@@ -1,16 +1,15 @@
 import { Fragment, useEffect, useState } from "react";
 import "styles/Table.scss";
-import { Pagination } from "./Pagination";
 import {
   mergeObjectNestedPropertiesByMatchedPropertyKey,
   sliceObjectArrayToPages,
 } from "utils/object";
 import React from "react";
 import { SortObjects } from "utils/sort";
-import { renderTableHeader } from "./TableRenderers/TableHeaderRenderer";
-import { renderTableBody } from "./TableRenderers/TableBodyRenderer";
-import { renderTablePagination } from "./TableRenderers/TablePaginationRenderer";
-import { renderPageSizeSelector } from "./TableRenderers/TablePageSizeSelectorRenderer";
+import { renderTableHeader } from "./Table/TableHeader";
+import { TableBody } from "./Table/TableBody";
+import { PageSelector } from "./Pagination/PageSelector";
+import { PageSizeSelector } from "./Pagination/PageSizeSelector";
 
 type TableProps = {
   id: string;
@@ -188,19 +187,19 @@ const ReactTable = (props: TableProps) => {
               sortedColumnIndex,
               reverseSort
             )}
-            {renderTableBody(data[currentPageNumber - 1], columns)}
+            {TableBody(data[currentPageNumber - 1], columns)}
           </table>
         ) : (
           <h1>loading...</h1>
         )}
         <div className="react-table-page-setting-container">
-          {renderPageSizeSelector({
+          {PageSizeSelector({
             pageNumber: currentPageNumber,
             pageSize: pageSize,
             rowTotal: tableData.length,
             onPageSizeChange: handleOnPageSizeSelectorChange 
           })}
-          {renderTablePagination(
+          {PageSelector(
             _totalPageNumber,
             currentPageNumber,
             handleOnPaginationChange

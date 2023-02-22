@@ -1,6 +1,6 @@
 import { Pagination } from "components/Pagination";
 
-export function renderTablePagination(
+export function PageSelector(
   pageCount: number,
   currentPage: number,
   onPageChange: any

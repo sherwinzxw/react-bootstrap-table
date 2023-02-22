@@ -8,7 +8,7 @@ type PageSelectorProps = {
   onPageSizeChange: (pageSize: number) => void;
 };
 
-export const renderPageSizeSelector: FunctionComponent<PageSelectorProps> = (
+export const PageSizeSelector: FunctionComponent<PageSelectorProps> = (
   props: PageSelectorProps
 ) => {
   const { pageNumber, pageSize, rowTotal, onPageSizeChange } = props;

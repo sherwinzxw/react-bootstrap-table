@@ -1,6 +1,6 @@
 import { CellClassnameRenderer } from "utils/renderer";
 
-export function renderTableBody(data: any, visibleColumns: any) {
+export function TableBody(data: any, visibleColumns: any) {
   if (data === (null || undefined || [])) {
     return "no data";
   } else {

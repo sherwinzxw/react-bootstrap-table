@@ -1,0 +1,13 @@
+.react-table-toolbar-container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+
+  .react-table-toolbar-button-group-container {
+    button {
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+}
