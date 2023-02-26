@@ -10,6 +10,7 @@ import { renderTableHeader } from "./Table/TableHeader";
 import { TableBody } from "./Table/TableBody";
 import { PageSelector } from "./Pagination/PageSelector";
 import { PageSizeSelector } from "./Pagination/PageSizeSelector";
+import Toolbar from "./Toolbar/Toolbar";
 
 type TableProps = {
   id: string;
@@ -66,6 +67,9 @@ const ReactTable = (props: TableProps) => {
   );
   const [togglePageSize, setTogglePageSize] = useState<boolean>(
     tableSchema.togglePageSize
+  );
+  const [toggleToolbar, setToggleToolbar] = useState<boolean>(
+    tableSchema.toggleToolbar
   );
   const [loading, setLoading] = useState<boolean>(true);
   const [schema, setSchema] = useState<any>(tableSchema);
@@ -152,12 +156,13 @@ const ReactTable = (props: TableProps) => {
     },
     [reverseSort]
   );
+
   const handleOnPaginationChange = React.useCallback((event: any) => {
     setCurrentPageNumber(event);
     setData(setTableData(tableData, tableSchema, pageSize));
   }, []);
-  const handleOnPageSizeSelectorChange = React.useCallback((event: any) => {
-    console.log(event);
+
+  const handleOnPageSizeSelectorChange = React.useCallback((event: any) => {    
     setPageSize(event);
     setData(setTableData(tableData, tableSchema, event));
   }, []);
@@ -176,35 +181,47 @@ const ReactTable = (props: TableProps) => {
 
   return (
     <Fragment>
-      <div className="react-table-container table-responsive">
-        {!loading ? (
-          <table key={id} id={id} className={classes}>
-            {renderTableHeader(
-              data[currentPageNumber - 1],
-              columns,
-              hasHeader,
-              tableSchema.sortable,
-              handleOnTableHeaderCellClick,
-              sortedColumnIndex,
-              reverseSort
-            )}
-            {TableBody(data[currentPageNumber - 1], columns)}
-          </table>
-        ) : (
-          <h1>loading...</h1>
-        )}
-        <div className="react-table-page-setting-container">
-          {PageSizeSelector({
-            pageNumber: currentPageNumber,
-            pageSize: pageSize,
-            rowTotal: tableData.length,
-            onPageSizeChange: handleOnPageSizeSelectorChange,
-          })}
-          {PageSelector(
-            _totalPageNumber,
-            currentPageNumber,
-            handleOnPaginationChange
+      <div
+        id={`${id}-container`}
+        className="react-table-container table-responsive"
+      >
+        <div className="react-table-content-wrapper">
+          {toggleToolbar ? (
+            <Toolbar
+              targetTableId={id}
+              targetTableContainerId={`${id}-container`}
+            ></Toolbar>
+          ) : null}
+
+          {!loading ? (
+            <table key={id} id={id} className={classes}>
+              {renderTableHeader(
+                data[currentPageNumber - 1],
+                columns,
+                hasHeader,
+                tableSchema.sortable,
+                handleOnTableHeaderCellClick,
+                sortedColumnIndex,
+                reverseSort
+              )}
+              {TableBody(data[currentPageNumber - 1], columns)}
+            </table>
+          ) : (
+            <h1>loading...</h1>
           )}
+          <div className="react-table-page-setting-container">
+            {PageSizeSelector({
+              pageNumber: currentPageNumber,
+              pageSize: pageSize,
+              rowTotal: tableData.length,
+              onPageSizeChange: handleOnPageSizeSelectorChange,
+            })}
+            {PageSelector(
+              _totalPageNumber,
+              currentPageNumber,
+              handleOnPaginationChange
+            )}
+          </div>
         </div>
       </div>
     </Fragment>

@@ -3,6 +3,16 @@
   flex-grow: 1;
 }
 
+:fullscreen {  
+  background: #fff;
+  padding:2rem;
+  margin:3px;
+  .react-table-content-wrapper{
+    padding:2rem;
+    box-shadow: 0 0.125rem 0.25rem 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
 @media (min-width: 62rem) {
   .nsw-docs__header-wrapper {
     z-index: 300;
@@ -19,7 +29,7 @@
   .content-container {
     padding: 1rem;
     background: #fff;
-    box-shadow:0 0.125rem 0.25rem 5px rgba(0,0,0,0.1)
+    box-shadow: 0 0.125rem 0.25rem 5px rgba(0, 0, 0, 0.1);
   }
   .nsw-docs__container {
     max-width: 90%;

@@ -8,6 +8,7 @@
   "clickToSelect": false,
   "togglePagination": true,
   "togglePageSize": true,
+  "toggleToolbar": true,
   "height": null,
   "toolbar": ["export", "refresh", "columns"],
   "columns": {

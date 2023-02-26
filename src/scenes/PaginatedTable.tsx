@@ -7,7 +7,7 @@ import Toolbar from "components/Toolbar/Toolbar";
 const PaginatedTable = () => {
   return <Fragment>
     <div className="content-container">
-      <Toolbar></Toolbar>
+      
       <Table
         id="flat-table-example"
         tableSchema={employeeSchemaMapping}

@@ -1,5 +1,9 @@
 import "styles/Toolbar.scss";
-const Toolbar = () => {
+import { toggleElementToFullScreen } from "utils/fullScreen";
+
+const Toolbar = (props: any) => {
+  const { targetTableId, targetTableContainerId } = props;
+
   return (
     <div className="react-table-toolbar-container">
       <div className="react-table-toolbar-button-group-container">
@@ -24,15 +28,29 @@ const Toolbar = () => {
           >
             <span className="material-symbols-outlined">refresh</span>
           </button>
-
           <button
             className="btn btn-secondary"
             type="button"
             name="fullscreen"
             aria-label="Fullscreen"
             title="Fullscreen"
+            onClick={(e: any) => {
+              const iconElement = e.currentTarget.children[0];
+              if (toggleElementToFullScreen(targetTableContainerId)) {
+                iconElement.innerText = "close_fullscreen";
+                iconElement.setAttribute("title", "Enter full screen mode");
+              } else {
+                iconElement.innerText = "open_in_full";
+                iconElement.setAttribute("title", "Exit full screen mode");
+              }
+            }}
           >
-            <span className="material-symbols-outlined">expand_content</span>
+            <span
+              className="material-symbols-outlined"
+              title="Enter full screen mode"
+            >
+              open_in_full
+            </span>
           </button>
           <div className="keep-open btn-group" title="Columns">
             <button
