@@ -1,5 +1,5 @@
 import "styles/Toolbar.scss";
-import { toggleElementToFullScreen } from "utils/fullScreen";
+import { toggleElementToFullScreen } from "utils/misc/fullScreen";
 
 const Toolbar = (props: any) => {
   const { targetTableId, targetTableContainerId } = props;

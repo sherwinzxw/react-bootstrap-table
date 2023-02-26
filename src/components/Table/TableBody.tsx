@@ -1,4 +1,4 @@
-import { CellClassnameRenderer } from "utils/renderer";
+import { CellClassnameRenderer } from "utils/table/renderer";
 
 export function TableBody(data: any, visibleColumns: any) {
   if (data === (null || undefined || [])) {

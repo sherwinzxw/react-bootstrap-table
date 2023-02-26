@@ -5,7 +5,7 @@ import {
   sliceObjectArrayToPages,
 } from "utils/object";
 import React from "react";
-import { SortObjects } from "utils/sort";
+import { SortObjects } from "utils/table/sort";
 import { renderTableHeader } from "./Table/TableHeader";
 import { TableBody } from "./Table/TableBody";
 import { PageSelector } from "./Pagination/PageSelector";
