@@ -1,5 +1,6 @@
 import "styles/Toolbar.scss";
 import { toggleElementToFullScreen } from "utils/misc/fullScreen";
+import { exportToCsv, exportToJson, exportToXml } from "utils/table/export";
 
 const Toolbar = (props: any) => {
   const { targetTableId, targetTableContainerId } = props;
@@ -103,23 +104,33 @@ const Toolbar = (props: any) => {
               <span className="caret"></span>
             </button>
             <div className="dropdown-menu dropdown-menu-right">
-              <a className="dropdown-item " href="#" data-type="json">
+              <a className="dropdown-item"
+                href="#"
+                data-type="json"
+                onClick={() => {
+                  exportToJson(targetTableId);
+                }}>
                 JSON
               </a>
-              <a className="dropdown-item " href="#" data-type="xml">
+              <a
+                className="dropdown-item "
+                href="#"
+                data-type="xml"
+                onClick={() => {
+                  exportToXml(targetTableId);
+                }}
+              >
                 XML
               </a>
-              <a className="dropdown-item " href="#" data-type="csv">
+              <a
+                className="dropdown-item "
+                href="#"
+                data-type="csv"
+                onClick={() => {
+                  exportToCsv(targetTableId, "csv");
+                }}
+              >
                 CSV
-              </a>
-              <a className="dropdown-item " href="#" data-type="txt">
-                TXT
-              </a>
-              <a className="dropdown-item " href="#" data-type="sql">
-                SQL
-              </a>
-              <a className="dropdown-item " href="#" data-type="excel">
-                MS-Excel
               </a>
             </div>
           </div>
