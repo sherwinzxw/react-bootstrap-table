@@ -25,7 +25,6 @@ const Layout = (props: any) => {
           <div className="nsw-docs__content">
             <div className="nsw-docs__container">{children}</div>
           </div>
-          <Footer></Footer>
         </div>
       </div>
     </Fragment>
